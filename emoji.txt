@@ -1,0 +1,108 @@
+#include<stdio.h>
+
+#include<conio.h>
+
+#include<graphics.h>
+
+
+
+void main()
+
+{
+
+int gd=DETECT,gm;
+
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+
+setcolor(RED);
+
+outtextxy(180,240,"Press any key to see smiley face");
+
+getch();
+
+cleardevice();/*Remove previous content*/
+
+setfillstyle(SOLID_FILL,YELLOW);
+
+circle(320,240,100);/*make the main part of the smiley face*/
+
+floodfill(320,240,RED);/*fill the circle with yellow color RED color here shows the border of circle*/
+
+setcolor(BLACK);
+
+ellipse(260,210,0,360,10,20);/*create right eye of smiley face*/
+
+ellipse(370,210,0,360,10,20);/*create left eye of smiley face*/
+
+arc(260,222,0,180,9);/*create lower part of right eye of smiley face*/
+
+arc(370,222,0,180,9);/*create lower part of left eye of smiley face*/
+
+setcolor(RED);
+
+arc(310,250,190,2,45);/*create lips of smiley face*/
+
+outtextxy(200,100,"I am happy");
+
+outtextxy(200,380,"Press any key to make the face sad");
+
+getch();
+
+cleardevice();
+
+circle(320,240,100);/*make the main part of the sad face*/
+setfillstyle(SOLID_FILL,CYAN);
+floodfill(320,240,RED);/*fill the circle with yellow color RED color here shows the border of circle*/
+
+setcolor(BLACK);
+
+ellipse(260,210,0,360,10,20);/*create right eye of sad face*/
+
+ellipse(370,210,0,360,10,20);/*create left eye of sad face*/
+
+arc(260,222,0,180,9);/*create lower part of left eye of sad face*/
+
+arc(370,222,0,180,9);/*create lower part of right eye of sad face*/
+
+setcolor(RED);
+
+arc(310,250,2,190,45);/*create lips of sad face*/
+
+outtextxy(200,100,"I am sad");
+outtextxy(200,380,"Press any key to see eye winking emoji");
+
+getch();
+cleardevice();
+circle(320,240,100);
+setfillstyle(SOLID_FILL,MAGENTA);
+floodfill(320,240,RED);
+setcolor(BLACK);
+ellipse(260,210,0,360,10,20);
+arc(370,222,0,180,9);
+arc(370,222,0,200,11);
+setcolor(RED);
+arc(310,250,190,2,45);
+outtextxy(200,100,"HII I'm eye winking emojii");
+outtextxy(200,380,"Press any key to see disturbed emoji");
+getch();
+cleardevice();
+outtextxy(200,100," disturbed emoji...");
+circle(320,240,100);
+setfillstyle(SOLID_FILL,CYAN);
+floodfill(320,240,RED);
+setcolor(BLACK);
+ellipse(260,210,0,360,10,20);
+ellipse(360,210,0,360,10,20);
+arc(310,230,45,18,6);
+arc(310,270,45,18,6);
+arc(320,270,45,18,6);
+arc(300,270,45,18,6);
+arc(290,270,45,18,6);
+arc(350,270,45,18,6);
+arc(330,270,45,18,6);
+arc(340,270,45,18,6);
+setcolor(RED);
+getch();
+closegraph();
+}
+
